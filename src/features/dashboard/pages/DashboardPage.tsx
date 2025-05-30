@@ -1,9 +1,15 @@
-export const DashboardPage = () => {
+"use client";
+
+import { useParams } from "react-router-dom";
+import { DashboardLayout } from "@/components/layout/DashboardLayout";
+import { PageContent } from "@/features/dashboard/components/PageContent";
+
+export function DashboardPage() {
+  const { pageId = "pagina-1" } = useParams<{ pageId: string }>();
+
   return (
-    <div className="h-screen flex items-center justify-center bg-green-50">
-      <h1 className="text-3xl font-bold text-green-800">
-        Bienvenido al Dashboard 🎉
-      </h1>
-    </div>
+    <DashboardLayout>
+      <PageContent pageId={pageId} />
+    </DashboardLayout>
   );
-};
+}

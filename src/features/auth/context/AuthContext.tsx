@@ -1,5 +1,9 @@
+"use client";
+
+import type React from "react";
+
 import { createContext, useContext, useState, useEffect } from "react";
-import type { User, AuthData } from "../types";
+import type { User } from "../types";
 import { login as loginService } from "../services/authService";
 import type { LoginInput } from "../types";
 
