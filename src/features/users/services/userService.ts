@@ -45,7 +45,8 @@ export const userService = {
     };
   },
 
-  // async deleteUser(id: string): Promise<void> {
-  //   await new Promise((resolve) => setTimeout(resolve, 500));
-  // },
+  async deleteUser(id: string): Promise<void> {
+    console.log(id);
+    await new Promise((resolve) => setTimeout(resolve, 500));
+  },
 };
